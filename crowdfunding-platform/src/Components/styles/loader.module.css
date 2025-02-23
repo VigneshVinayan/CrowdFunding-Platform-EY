@@ -1,0 +1,38 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust based on need */
+  }
+  
+  .rainbow-loader {
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(
+      90deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    background-size: 400%;
+    animation: rainbow 1.5s linear infinite, pulse 1s infinite alternate;
+    border-radius: 5px;
+  }
+  
+  /* Rainbow color transition */
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Pulse effect for smooth animation */
+  @keyframes pulse {
+    0% { transform: scaleX(1); }
+    100% { transform: scaleX(1.2); }
+  }
+  

@@ -1,0 +1,126 @@
+/* Fullscreen background with a soft overlay */
+.backgroundImage {
+    position: relative;
+    background: url("../assets/bgPhoto.avif") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Dark overlay for better text contrast */
+  .backgroundImage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Soft black overlay */
+    z-index: 1;
+  }
+  
+  /* Text container */
+  .title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: "Georgia", Times, "Times New Roman", serif;
+  }
+  
+  /* Tagline */
+  .text {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+  }
+  
+  /* Header styling */
+  .header {
+    margin: 10px 0 0;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Button styling */
+  .donateBtn {
+    position: relative;
+    margin-top: 20px;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #14d8b8, #0b9279);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(20, 216, 184, 0.5);
+    z-index: 2;
+  }
+  
+  /* Button animation on hover */
+  .donateBtn:hover {
+    background: linear-gradient(90deg, #0b9279, #14d8b8);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(20, 216, 184, 0.7);
+  }
+  
+  /* Button border effect */
+  .donateBtn::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    border-radius: 50px;
+    border: 3px solid rgba(21, 215, 180, 0.8);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .donateBtn:hover::after {
+    border-color: rgba(21, 215, 180, 1);
+    transform: scale(1.1);
+  }
+  
+  /* 🔹 RESPONSIVE DESIGN 🔹 */
+  @media (max-width: 768px) {
+    .header {
+      font-size: 2.5rem;
+    }
+    .text {
+      font-size: 1.8rem;
+    }
+    .donateBtn {
+      padding: 12px 30px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      font-size: 2rem;
+    }
+    .text {
+      font-size: 1.5rem;
+      letter-spacing: 3px;
+    }
+    .donateBtn {
+      padding: 10px 25px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-height: 450px) {
+    .title {
+      top: 20%;
+    }
+  }
+  

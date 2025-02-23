@@ -1,0 +1,20 @@
+{
+  "short_name": "Aurobindo Foundation",
+  "name": "Crowd-funding for Aurobindo Foundation, Bhubaneswar, Odisha",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "navImage.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
