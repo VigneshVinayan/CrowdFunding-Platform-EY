@@ -1,2 +1,2 @@
 # CrowdFunding-Platform-EY
-Edunet 
+Project for CrowdFunding platform for EY-Edunet foundation Internship
